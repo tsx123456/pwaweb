@@ -9,7 +9,17 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<script>
-			window.location.href="https://777slot.xin/?pwa=1"
+			const hostname = window.location.origin
+			let baseURL = ""
+			if (hostname === "https://game.ccfly.cc") {
+				baseURL = "https://slot55xx3.ccfly.cc"
+			} else {
+				baseURL = hostname.replace('//game.', '//')
+			}
+			const url = new URL(baseURL)
+			const params = url.searchParams;
+			params.set("pwa", "1")
+			window.location.href = url
 		</script>
 	</head>
 	<body>
