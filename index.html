@@ -11,7 +11,7 @@
 		<script>
 			const hostname = window.location.href
 			let baseURL = ""
-			if (hostname === "https://game.ccfly.cc") {
+			if (hostname.includes("https://game.ccfly.cc")) {
 				baseURL = "https://slot55xx3.ccfly.cc"
 			} else {
 				baseURL = hostname.replace('//game.', '//')
